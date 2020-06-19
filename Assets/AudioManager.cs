@@ -7,6 +7,7 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     public Sounds[] sounds;
+    public GameObject videoPanel, audioPanel;
     public static AudioManager instance;
     void Awake()
     {
@@ -23,6 +24,8 @@ public class AudioManager : MonoBehaviour
    
     public void ClickOnPlaySound(string name)
     {
+        videoPanel.SetActive(false);
+        audioPanel.SetActive(true);
         if (instance == null)
         {
             instance = this;

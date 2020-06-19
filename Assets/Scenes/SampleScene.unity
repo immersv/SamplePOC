@@ -295,7 +295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &172034992
 RectTransform:
   m_ObjectHideFlags: 0
@@ -368,11 +368,13 @@ MonoBehaviour:
   videos:
   - videoClipName: bahubali
     videoClip: {fileID: 32900000, guid: b43afc6d97133564c8b9f2618eee89fd, type: 3}
-    playOnAwake: 0
+    playOnAwake: 1
     waitForFirstFrame: 0
     source: {fileID: 0}
     videoSource: {fileID: 0}
   rawImage: {fileID: 2141435905}
+  videoPanel: {fileID: 172034991}
+  audioPanel: {fileID: 1132358245}
 --- !u!1 &384644103
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1132358246
 Transform:
   m_ObjectHideFlags: 0
@@ -1024,6 +1026,8 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  videoPanel: {fileID: 172034991}
+  audioPanel: {fileID: 1132358245}
 --- !u!1 &1204728937
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class VideoManager : MonoBehaviour
     public Videos[] videos;
     public RawImage rawImage;
     public static VideoManager instance;
-    
+    public GameObject videoPanel,audioPanel;
 
     // Start is called before the first frame update
     void Awake()
@@ -38,7 +38,10 @@ public class VideoManager : MonoBehaviour
     }
     public void ClickonPlayVideo(String name)
     {
-        StartCoroutine(PlayVideo(name)); 
+        audioPanel.SetActive(false);
+        videoPanel.SetActive(true);
+        StartCoroutine(PlayVideo(name));
+       
     }
     IEnumerator PlayVideo(string name)
     {
@@ -49,7 +52,7 @@ public class VideoManager : MonoBehaviour
             if (v == null)
             {
                 Debug.Log("Error Video:" + name + " not found");
-                
+                              
             }
             else
             {
