@@ -12,11 +12,12 @@ public class VideoManager : MonoBehaviour
     public Videos[] videos;
     public RawImage rawImage;
     public static VideoManager instance;
-    public GameObject videoPanel,audioPanel,modelPanel;
+   
 
     // Start is called before the first frame update
     void Awake()
     {
+        instance = this;
 
         foreach (Videos v in videos)
         {
@@ -36,11 +37,9 @@ public class VideoManager : MonoBehaviour
         
         
     }
-    public void ClickonPlayVideo(String name)
+    public void ClickonPlayVideo(string name)
     {
-        audioPanel.SetActive(false);        
-        modelPanel.SetActive(false);
-        videoPanel.SetActive(true);
+        
         StartCoroutine(PlayVideo(name));
        
     }

@@ -7,12 +7,12 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     public Sounds[] sounds;
-    public GameObject videoPanel, audioPanel,modelPanel;
+   
     public static AudioManager instance;
     void Awake()
     {
-       
-        foreach(Sounds s in sounds)
+        instance = this;
+        foreach (Sounds s in sounds)
         {
            s.source= gameObject.AddComponent<AudioSource>();
             s.source.clip = s.audioClip;
@@ -23,13 +23,8 @@ public class AudioManager : MonoBehaviour
     }
    
     public void ClickOnPlaySound(string name)
-    {
-        videoPanel.SetActive(false);
-        modelPanel.SetActive(false);
-        audioPanel.SetActive(true);
-        if (instance == null)
-        {
-            instance = this;
+    {       
+         
             Sounds s = Array.Find(sounds, sounds => sounds.audioclipName == name);
             if (s == null)
             {
@@ -37,8 +32,14 @@ public class AudioManager : MonoBehaviour
                 return;
             }
             s.source.Play();
+                 
+    }
+    public void ClickOnStopSound()
+    {
+        foreach(Sounds s in sounds)
+        {
+            s.source = gameObject.GetComponent<AudioSource>();
+            s.source.Stop();
         }
-       
-       
     }
 }

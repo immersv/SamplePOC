@@ -373,9 +373,6 @@ MonoBehaviour:
     source: {fileID: 0}
     videoSource: {fileID: 0}
   rawImage: {fileID: 2141435905}
-  videoPanel: {fileID: 172034991}
-  audioPanel: {fileID: 1132358245}
-  modelPanel: {fileID: 1178287791}
 --- !u!1 &384644103
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,8 +455,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1132358247}
-        m_MethodName: ClickOnPlaySound
+      - m_Target: {fileID: 867315148}
+        m_MethodName: PlayAudio
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -739,6 +736,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &867315146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 867315147}
+  - component: {fileID: 867315148}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &867315147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867315146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &867315148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867315146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87506d2fbd7296e4787f374d4713b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPanel: {fileID: 172034991}
 --- !u!1 &892125671
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +1035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1132358246
 Transform:
   m_ObjectHideFlags: 0
@@ -1027,9 +1068,6 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  videoPanel: {fileID: 172034991}
-  audioPanel: {fileID: 1132358245}
-  modelPanel: {fileID: 1178287791}
 --- !u!1 &1178287791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1178287792
 Transform:
   m_ObjectHideFlags: 0
@@ -1076,9 +1114,7 @@ MonoBehaviour:
   threeDModels:
   - threeDModelName: model
     modelUrl: 
-  videoPanel: {fileID: 172034991}
-  audioPanel: {fileID: 1132358245}
-  modelPanel: {fileID: 1178287791}
+  tempModel: {fileID: 0}
 --- !u!1 &1204728937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,8 +1401,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1178287793}
-        m_MethodName: OnclickModel
+      - m_Target: {fileID: 867315148}
+        m_MethodName: PlayModel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1495,8 +1531,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 172034995}
-        m_MethodName: ClickonPlayVideo
+      - m_Target: {fileID: 867315148}
+        m_MethodName: PlayVideo
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
