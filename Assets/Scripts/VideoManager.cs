@@ -45,9 +45,8 @@ public class VideoManager : MonoBehaviour
     }
     IEnumerator PlayVideo(string name)
     {
-        if (instance == null)
-        {
-            instance = this;
+        
+         
             Videos v = Array.Find(videos, videos => videos.videoClipName == name);
             if (v == null)
             {
@@ -67,10 +66,7 @@ public class VideoManager : MonoBehaviour
                 videos[0].videoSource.Play();
             }
             
-        }
-        else
-        {
-           // videos[0].videoSource.Stop();
-        }
+        
+        
     }
 }
